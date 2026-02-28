@@ -12,7 +12,7 @@ public class StartDisplay : MonoBehaviour
     public void ShowDisplay()
     {
         NameSponsor.SetActive(true);
-        StartButton.SetActive(true);
+        StartButton.SetActive(false);
 
     }
 }
