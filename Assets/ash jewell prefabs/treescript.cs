@@ -6,6 +6,7 @@ public class treescript : MonoBehaviour
 {
 
     public GameObject tree;
+    public GameObject seed;
     private Animation anim;
 
     void OnCollisionEnter(Collision collision)
@@ -16,6 +17,8 @@ public class treescript : MonoBehaviour
         {
             anim.Play();
             Destroy(collision.gameObject);
+            Destroy(seed);
+
         }
 
     }
