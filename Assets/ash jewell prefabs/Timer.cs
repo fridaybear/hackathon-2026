@@ -19,10 +19,13 @@ public class Timer : MonoBehaviour
 
     public GameObject particles;
 
+    public GameObject TikTok;
+
     void OnEnable()
     {
         player_script = Player.GetComponent<PlayerScript>();
         Debug.Log("countdown started");
+        TikTok.SetActive(true);
     }
     void Update()
     {
