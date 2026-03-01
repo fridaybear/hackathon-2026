@@ -15,6 +15,10 @@ public class Timer : MonoBehaviour
     public string nextScene;
     private PlayerScript player_script;
 
+    public GameObject seed;
+
+    public GameObject particles;
+
     void OnEnable()
     {
         player_script = Player.GetComponent<PlayerScript>();
@@ -22,6 +26,8 @@ public class Timer : MonoBehaviour
     }
     void Update()
     {
+        particles.transform.position = seed.transform.position;
+
         if (Countdown > 0)
         {
             text.text = Countdown.ToString("F1");

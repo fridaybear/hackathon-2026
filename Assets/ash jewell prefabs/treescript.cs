@@ -9,12 +9,19 @@ public class treescript : MonoBehaviour
     public GameObject seed;
     private Animation anim;
 
+    public GameObject particles;
+    private ParticleSystem partsys;
+
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("ran");
+        partsys = particles.GetComponent<ParticleSystem>();
+
+        partsys.Emit(200);
+
         anim = tree.GetComponent<Animation>();
         if (collision.gameObject.name == "collisionObj")
         {
+
             anim.Play();
             Destroy(collision.gameObject);
             Destroy(seed);
