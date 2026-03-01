@@ -17,7 +17,8 @@ public class combination_script : MonoBehaviour
             position = parent_obj.transform.position;
             Destroy(collision.gameObject);
             Destroy(parent_obj);
-            GameObject newobj = Instantiate(output_obj, position + new Vector3(0,10,0), Quaternion.identity);
+            Destroy(output_obj);
+            output_obj.transform.position = parent_obj.transform.position + new Vector3(0,10,0);
         }
 
     }
