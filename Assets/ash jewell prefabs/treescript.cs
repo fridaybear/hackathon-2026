@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class treescript : MonoBehaviour
 {
+    public float waitTillWin = 10;
 
     public GameObject tree;
     public GameObject seed;
     private Animation anim;
-
     public GameObject particles;
     private ParticleSystem partsys;
 
@@ -21,7 +21,6 @@ public class treescript : MonoBehaviour
         anim = tree.GetComponent<Animation>();
         if (collision.gameObject.name == "collisionObj")
         {
-
             anim.Play();
             Destroy(collision.gameObject);
             Destroy(seed);
